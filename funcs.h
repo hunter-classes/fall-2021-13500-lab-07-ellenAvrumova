@@ -1,3 +1,11 @@
+/**
+ * Author: Ellen Avrumova
+ * Course: CSCI-135
+ * Instructor: Tong Yi & Mike Zamansky
+ * Assignment: Lab 7
+ * This is the header file for functions in indent.cpp and unindent.cpp
+*/
+
 #include <string>
 #include <string>
 

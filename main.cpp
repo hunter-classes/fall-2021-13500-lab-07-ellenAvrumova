@@ -1,9 +1,19 @@
+/**
+ * Author: Ellen Avrumova
+ * Course: CSCI-135
+ * Instructor: Tong Yi & Mike Zamansky
+ * Assignment: Lab 7
+ * This is the main file. This file creates a 2 new fixed files called
+ * fixedCode.cpp and indentedFixedCode.cpp. It also prints the fixed output. 
+*/
+
 #include <iostream>
 #include <fstream>
 #include "funcs.h"
 
 int main() {
     std::cout << "***TASK A****" << std::endl;
+
     std::ifstream fin("badCode.cpp");
     std::ofstream out;
     out.open("fixedCode.cpp");
@@ -22,6 +32,7 @@ int main() {
     std::cout << std::endl;
 
     std::cout << "***TASK B****" << std::endl;
+    
     std::ifstream fin2("badCode.cpp");
     std::ofstream out2;
     out2.open("indentedFixedCode.cpp");

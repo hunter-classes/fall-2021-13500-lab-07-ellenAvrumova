@@ -1,3 +1,9 @@
+# Author: Ellen Avrumova
+# Course: CSCI-135
+# Instructor: Tong Yi & Mike Zamansky
+# Assignment: Lab 7
+# This is the Makefile for Lab7.
+
 main: main.o unindent.o indent.o
 	g++ -o main main.o unindent.o indent.o
 
