@@ -16,7 +16,11 @@ int main() {
         std::cout << removeLeadingSpaces(line) << std::endl;
         out << removeLeadingSpaces(line) << "\n";
     }
+    fin.close();
+    out.close();
+
     std::cout << std::endl;
+
     std::cout << "***TASK B****" << std::endl;
     std::ifstream fin2("badCode.cpp");
     std::ofstream out2;
@@ -26,20 +30,27 @@ int main() {
         exit(1);
     }
 
-    std::string firstLine;
-    std::string secondLine;
-    while(getline(fin2,firstLine)) {
-        int openBrace = countChar(line,'{');
-        int closeBrace = countChar(line,'}');
-        int numTabs = 0;
+    std::string output;
+    int numTabs;
+    while(getline(fin2,output)) {
+        int openBrace = countChar(output,'{');
+        int closeBrace = countChar(output,'}');
+        if(closeBrace == 1) {
+            numTabs--;
+        }
+        for(int i = 0; i < numTabs; i++) {
+            std::cout << "\t";
+            out2 << "\t";
+        }
+        std::cout << removeLeadingSpaces(output) << std::endl;
+        out2 << removeLeadingSpaces(output) << "\n";
         if(openBrace == 1) {
-        numTabs++;
+            numTabs++;
         }
-        else if(closeBrace == 1) {
-        numTabs--;
-        }
-        std::cout << indent(removeLeadingSpaces(firstLine), numTabs) << std::endl;
-        out2 << indent(removeLeadingSpaces(firstLine), numTabs) << "\n";
     }
+
+    fin2.close();
+    out2.close();
+
     return 0;
 }

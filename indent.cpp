@@ -10,12 +10,3 @@ int countChar(std::string line, char c) {
     }
     return count;
 }
-
-std::string indent(std::string line, int numTabs) {
-    std::string outputLine;
-    for(int i = 0; i < numTabs; i++) {
-        outputLine += "\t";
-    }
-    outputLine += line;
-    return outputLine;
-}

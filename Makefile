@@ -11,6 +11,6 @@ indent.o: indent.cpp funcs.h
 	g++ -c indent.cpp
 
 clean:
-	rm -f main.o unindent.o fixedCode.cpp
+	rm -f main.o unindent.o indent.o fixedCode.cpp indentedFixedCode.cpp
 
 	
