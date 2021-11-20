@@ -11,6 +11,10 @@
 #include <fstream>
 #include "funcs.h"
 
+//adding small comments onto main.cpp
+//not much to change, your code works well
+//and is very neat and organized :)
+
 int main() {
     std::cout << "***TASK A****" << std::endl;
 
